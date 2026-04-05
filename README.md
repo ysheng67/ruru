@@ -1,4 +1,4 @@
-# 🔨 Hammer Sandbox
+# 🔨 Hammer Sandbox (R U R U)
 
 A browser-based 2D physics sandbox. Swing a chained hammer at ragdoll humanoids seated in breakable wooden chairs. No objectives — just chaos.
 

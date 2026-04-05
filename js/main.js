@@ -8,25 +8,23 @@ import { buildBG, drawBG, initDust, updateDust } from './background.js';
 import { drawSplat, initSplat } from './splatter.js';
 
 //music
+const overlay = document.getElementById("start-overlay");
+const music = document.getElementById("bg-music"); // or your Audio()
 
-const music = document.getElementById("bg-music");
-const muteBtn = document.getElementById("mute-btn");
-
-let isMuted = false;
-
-// browsers block autoplay → wait for first interaction
-window.addEventListener("click", () => {
-  if (music.paused) {
-    music.volume = 0.5; // adjust if needed
+overlay.addEventListener("click", () => {
+  // start music (required user interaction)
+  if (music) {
+    music.volume = 0.5;
     music.play();
   }
-}, { once: true });
 
-muteBtn.addEventListener("click", () => {
-  isMuted = !isMuted;
-  music.muted = isMuted;
+  // fade out overlay
+  overlay.classList.add("hidden");
 
-  muteBtn.textContent = isMuted ? "🔇" : "🔊";
+  // optional: remove it completely after animation
+  setTimeout(() => {
+    overlay.remove();
+  }, 500);
 });
 
 // ─── Canvas resize ────────────────────────────────────────────────────

@@ -40,3 +40,38 @@ canvas {
   padding: 6px 10px;
   cursor: pointer;
 }
+
+
+#start-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(13, 8, 4, 0.75);
+  /* translucent dark */
+  backdrop-filter: blur(4px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+  cursor: pointer;
+
+  transition: opacity 0.5s ease;
+}
+
+#start-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#start-text {
+  color: rgba(255, 190, 80, 0.8);
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}

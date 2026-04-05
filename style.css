@@ -1,15 +1,15 @@
 *,
 *::before,
 *::after {
-  margin:     0;
-  padding:    0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  overflow:   hidden;
+  overflow: hidden;
   background: #0d0804;
-  cursor:     none;
+  cursor: none;
 }
 
 canvas {
@@ -17,15 +17,26 @@ canvas {
 }
 
 #hint {
-  position:       fixed;
-  bottom:         22px;
-  width:          100%;
-  text-align:     center;
-  color:          rgba(255, 190, 80, 0.28);
-  font-family:    'Georgia', serif;
-  font-size:      13px;
+  position: fixed;
+  bottom: 22px;
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 190, 80, 0.28);
+  font-family: 'Georgia', serif;
+  font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   pointer-events: none;
-  user-select:    none;
+  user-select: none;
+}
+
+#mute-btn {
+  position: fixed;
+  top: 22px;
+  right: 22px;
+  background: rgba(255, 190, 80, 0.1);
+  color: rgba(255, 190, 80, 0.8);
+  border: 1px solid rgba(255, 190, 80, 0.3);
+  padding: 6px 10px;
+  cursor: pointer;
 }

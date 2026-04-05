@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hammer Sandbox</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <audio id="bg-music" loop>
+    <source src="ruru.mp3" type="audio/mpeg">
+  </audio>
+
   <canvas id="c"></canvas>
+  <button id="mute-btn">🔊</button>
+
   <div id="hint">Swing the hammer &nbsp;·&nbsp; Hold Space for slow-mo &nbsp;·&nbsp; R to reset</div>
 
   <!-- type="module" enables ES module imports and defers execution automatically -->
   <script type="module" src="js/main.js"></script>
 </body>
+
 </html>
